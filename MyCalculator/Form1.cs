@@ -31,9 +31,9 @@ namespace MyCalculator
             {
                 if (num.Text == ",")    // IF the button for decimal is pressed 
                 {
-                    if (!resultTxt.Text.Contains(".")) // IF the text in the box does not contain decimal then add decimal behind the current text
+                    if (!resultTxt.Text.Contains(",")) // IF the text in the box does not contain decimal then add decimal behind the current text
                     {
-                        resultTxt.Text = resultTxt.Text + "."; // Adds the decimal point behind the number
+                        resultTxt.Text = resultTxt.Text + ","; // Adds the decimal point behind the number
                     }
                 }
                 else    // Otherwise keep adding numbers behind it
@@ -48,7 +48,7 @@ namespace MyCalculator
             // Creating an object for the pressed button of operators
             Button pressedOperator = (Button)sender;
 
-            if (resultTxt.Text != "0" && resultTxt.Text != ".")
+            if (resultTxt.Text != "0" && resultTxt.Text != ",")
             {
                 // Get the first value from the textbox 
                 // Even after pressing equal for solution which the solution will be set in the Textbox
